@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 李继玄（15201002062@163.com）
  * @Date: 2021-01-21 09:40:52
- * @FilePath: /react-ts/src/routers/index.tsx
+ * @FilePath: /react-ts-redux/src/routers/index.tsx
  */
 /**
  * @file 路由定义
@@ -22,7 +22,7 @@ const onUpdate = function (): void {
   // const location = browserHistory.getCurrentLocation();
   // console.log(location);
   if (window.location.pathname === '/') {
-    window.location.href = `/demo1`;
+    window.location.href = `/demo2`;
   }
 };
 
@@ -33,6 +33,7 @@ const Routers: React.FC = function (): React.ReactElement {
     <Route path={config.routers.dashboard} component={Layout}>
       <IndexRoute component={asnyc(() => import('src/pages/dashboard/index'))}></IndexRoute>
       <Route path="/demo1" component={ asnyc(() => import('src/pages/antv/index'))}></Route>
+      <Route path="/demo2" component={ asnyc(() => import('src/pages/test/redux'))}></Route>
       <Route path={ config.routers.test.study } component={ asnyc(() => import('src/pages/test/study'))}></Route>
       {/* <Route path='/demo1' component={ asnyc(() => import('src/test/demo1/index')) }></Route>
       <Route path='/demo2' component={ asnyc(() => import('src/test/demo4/p')) }></Route>

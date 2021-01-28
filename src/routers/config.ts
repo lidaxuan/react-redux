@@ -32,6 +32,7 @@ export const routers = {
   test: {
     in: '/test/in', // 注入
     study: '/test/study', // 注入
+    redux: '/test/redux', // 注入
   },
   shop:{
     set:'/shop/set' //首页轮播配置
@@ -169,6 +170,10 @@ export const routerMenus = [
       {
         name: '学习',
         key: 'test.study'
+      },
+      {
+        name: '仓库',
+        key: 'test.redux'
       }
     ]
   },
